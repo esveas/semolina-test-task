@@ -1,0 +1,66 @@
+body {
+  margin: 0 auto;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  margin-top: 100px;
+  border: 1px solid lightgray;
+  border-radius: 3%;
+  width: 40%;
+  background-color: #fafafa;
+}
+
+.calc,
+#result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#result {
+  height: 100px;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
+input {
+  width: 40%;
+  height: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+  border: 1px solid #bdbdbd;
+  border-radius: 3%;
+}
+
+.nav {
+  margin: 0.5rem 0 1.5rem;
+}
+
+button {
+  vertical-align: top;
+  width: 4rem;
+  height: 60px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 22px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: rgb(231, 231, 231);
+  border: 0;
+  border-bottom: 2px solid #cacaca;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #d3d3d3;
+  box-shadow: inset 0 -2px #d8d8d8;
+  outline: none;
+  border-radius: 7%;
+}
+
+button:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}

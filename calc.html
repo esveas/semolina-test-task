@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Semolina-calc</title>
+    <link rel="stylesheet" href="css/calc.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <p id="result"></p>
+      <div class="calc">
+        <input
+          autofocus
+          type="text"
+          name="number"
+          id="number"
+          maxlength="10"
+          onKeyPress="check()"
+        />
+        <div id="nav">
+          <button id="sqr">sqr</button>
+          <button id="sqrt">sqrt</button>
+          <button id="ln">ln</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/calc.js"></script>
+</html>

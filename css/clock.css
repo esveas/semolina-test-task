@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#clock {
+  height: 100vh;
+  fill: none;
+  stroke: #222;
+  transform: rotate(-90deg);
+}
+
+.group {
+  stroke-width: 0.1;
+  transform: translate(20px, 20px);
+}
+
+.minute,
+.hour {
+  stroke-linecap: round;
+  transform: translate(20px, 20px) rotate(0deg);
+}
+
+.minute {
+  stroke-width: 0.5;
+  animation: rotateMinuteHand 3600s steps(60) infinite;
+  animation-delay: calc(var(--set-seconds) * -1 * 1s);
+}
+
+.hour {
+  transform: translate(20px, 20px) rotate(calc(var(--set-hours) * 30deg));
+  animation: rotateHourHand calc(12 * 60 * 60s) linear infinite;
+  stroke-width: 0.7;
+  animation-delay: calc(
+    calc(var(--set-minutes) * -60 * 1s) + calc(var(--set-seconds) * -1 * 1s)
+  );
+}
+
+@keyframes rotateMinuteHand {
+  from {
+    transform: translate(20px, 20px) rotate(calc(var(--set-minutes) * 6deg));
+  }
+  to {
+    transform: translate(20px, 20px)
+      rotate(calc(var(--set-minutes) * 6deg + 360deg));
+  }
+}
+
+@keyframes rotateHourHand {
+  from {
+    transform: translate(20px, 20px) rotate(calc(var(--set-hours) * 30deg));
+  }
+  to {
+    transform: translate(20px, 20px)
+      rotate(calc(var(--set-hours) * 30deg + 360deg));
+  }
+}
+
+/* rotate */
+.group > line:nth-child(1) {
+  transform: rotate(30deg);
+}
+
+.group > line:nth-child(2) {
+  transform: rotate(calc(2 * 30deg));
+}
+
+.group > line:nth-child(3) {
+  transform: rotate(calc(3 * 30deg));
+  stroke-width: 0.5;
+}
+
+.group > line:nth-child(4) {
+  transform: rotate(calc(4 * 30deg));
+}
+.group > line:nth-child(5) {
+  transform: rotate(calc(5 * 30deg));
+}
+
+.group > line:nth-child(6) {
+  transform: rotate(calc(6 * 30deg));
+  stroke-width: 0.5;
+}
+
+.group > line:nth-child(7) {
+  transform: rotate(calc(7 * 30deg));
+}
+
+.group > line:nth-child(8) {
+  transform: rotate(calc(8 * 30deg));
+}
+
+.group > line:nth-child(9) {
+  transform: rotate(calc(9 * 30deg));
+  stroke-width: 0.5;
+}
+
+.group > line:nth-child(10) {
+  transform: rotate(calc(10 * 30deg));
+}
+
+.group > line:nth-child(11) {
+  transform: rotate(calc(11 * 30deg));
+}
+.group > line:nth-child(12) {
+  transform: rotate(calc(12 * 30deg));
+  stroke-width: 0.5;
+}
